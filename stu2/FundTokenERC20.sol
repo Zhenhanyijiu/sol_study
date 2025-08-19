@@ -27,11 +27,16 @@ contract FundTokenERC20 is ERC20 {
     }
 
     function cliam(uint256 amount) public {
+        //可以理解为兑换一定数量的通证
+
         require(
             balanceOf(msg.sender) >= amount,
             "You dont have enough ERC20 tokens"
         );
         require(fundMe.getFundSuccess(), "The fundme is not completed yet");
+        /* to add */
+        // 兑换完成
+        // 调用burn
         _burn(msg.sender, amount);
     }
 }
