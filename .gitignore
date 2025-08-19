@@ -13,3 +13,6 @@ states/
 # Optional
 .env
 .env.local
+
+# web3_tutorial
+web3_tutorial
